@@ -1,10 +1,12 @@
 <template>
   <div class="card collapse-item" :class="{ 'is-fullwidth': $parent.isFullwidth, 'is-active': isActived }">
     <header class="card-header touchable" role="tab" :aria-expanded="selected ? 'true' : 'fase'" @click="toggle">
-      <h3 class="card-header-title">{{ title }}</h3>
-      <span class="card-header-icon">
-        <i class="fa fa-angle-right"></i>
-      </span>
+      <slot name="header">
+        <h3 class="card-header-title">{{ title }}</h3>
+        <span class="card-header-icon">
+          <i class="fa fa-angle-right"></i>
+        </span>
+      </slot>
     </header>
     <transition
       name="collapsed-fade"
