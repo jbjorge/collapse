@@ -38,7 +38,7 @@ export default {
     selected: Boolean,
     title: {
       type: String,
-      required: true
+      default: ''
     }
   },
 
